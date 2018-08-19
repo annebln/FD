@@ -630,7 +630,7 @@ for (i in 1:c)
 				if (!warning) thresh<-3
 				if (nb.sp[i] >= thresh)
 				{
-					convhull <- convhulln(tr.FRic, "FA")
+					convhull <- convhulln(tr.FRic, options = c("QJ","FA"))
 					if (!stand.FRic) FRic[i] <- convhull$vol
 					if (stand.FRic) FRic[i] <- convhull$vol / FRic.all
 				}
